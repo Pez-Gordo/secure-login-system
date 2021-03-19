@@ -1,0 +1,6 @@
+body {
+    background-color: lightgrey;
+}
+#alert, #register-box, #forgot-box {
+    display: none;
+}
