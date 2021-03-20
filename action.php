@@ -9,7 +9,8 @@
         $pass = $_POST['pass'];
         $cpass = $_POST['cpass'];
 
-        $conn->query("INSERT INTO users (rname, username, email, pass) VALUES ('$name', '$uname', '$email', '$pass')");
+        $query = "INSERT INTO users (rname, username, email, pass) VALUES ('$name', '$uname', '$email', '$pass')";
+        mysqli_query($conn, $query);
 
         exit("ok");
     }
@@ -21,8 +22,8 @@
         $uname = $_POST['username'];
         $pass = $_POST['password'];
 
-        //$sql = $conn->query("SELECT * FROM users");
-        $sql = $conn->query("SELECT * FROM users WHERE username LIKE '$uname' AND pass LIKE '$pass'");
+        $query = "SELECT * FROM users WHERE username LIKE '$uname' AND pass LIKE '$pass'";
+        $sql = mysqli_query($conn, $query);
 
         if ($sql->num_rows > 0) {
             exit("ok");
