@@ -13,7 +13,7 @@
         <div class="row">
             <div class="col-lg-4 offset-lg-4" id="alert">
                 <div class="alert alert-success">
-                    <strong id="result">Hello World!</strong>
+                    <strong id="result"></strong>
                 </div>
             </div>
         </div>
@@ -25,10 +25,10 @@
                 <h2 class="text-center mt-2">Login</h2>
                 <form action="" method="post" role="form" class="p-2" id="login-frm">
                     <div class="form-group p-2">
-                        <input type="text" name="username" class="form-control" placeholder="User name" required>
+                        <input type="text" name="username" class="form-control" placeholder="User name" required minlength="2">
                     </div>
                     <div class="form-group p-2">
-                        <input type="password" name="password" class="form-control" placeholder="Password" required>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required minlength="6">
                     </div>
                     <div class="form-group p-2">
                         <div class="custom-control custom-checkbox">
@@ -37,10 +37,10 @@
                             <a href="#" id="forgot-btn" class="float-right">Forgot Password?</a>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group p-2">
                         <input type="submit" name="login" id="login" value="Login" class="btn btn-primary btn-block">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group p-2">
                         <p class="text-center">New User?<a href="#" id="register-btn">Register Here</a></p>
                     </div>
                 </form>
@@ -54,19 +54,19 @@
                 <h2 class="text-center mt-2">Register</h2>
                 <form action="" method="post" role="form" class="p-2" id="register-frm">
                     <div class="form-group p-2">
-                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" required minlength="3">
                     </div>
                     <div class="form-group p-2">
-                        <input type="text" name="uname" class="form-control" placeholder="User Name" required>
+                        <input type="text" name="uname" class="form-control" placeholder="User Name" required minlength="4">
                     </div>
                     <div class="form-group p-2">
                         <input type="email" name="email" class="form-control" placeholder="Email" required>
                     </div>
                     <div class="form-group p-2">
-                        <input type="password" name="pass" class="form-control" placeholder="Password" required>
+                        <input type="password" name="pass" id="pass" class="form-control" placeholder="Password" required minlength="6">
                     </div>
                     <div class="form-group p-2">
-                        <input type="password" name="cpass" class="form-control" placeholder="Confirm Password" required>
+                        <input type="password" name="cpass" id="cpass" class="form-control" placeholder="Confirm Password" required>
                     </div>
                     <div class="form-group p-2">
                         <div class="custom-control custom-checkbox">
@@ -74,10 +74,10 @@
                             <label for="customCheck2" class="custom-control-label">I agree to the <a href="#">terms & conditions</a></label>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group p-2">
                         <input type="submit" name="register" id="register" value="Register" class="btn btn-primary btn-block">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group p-2">
                         <p class="text-center">Already registered?<a href="#" id="login-btn">login here</a></p>
                     </div>
                 </form>
@@ -99,7 +99,7 @@
                         <input type="email" name="femail" class="form-control" placeholder="Email" required>
                     </div>
                     
-                    <div class="form-group">
+                    <div class="form-group p-2">
                         <input type="submit" name="forgot" id="forgot" value="Reset" class="btn btn-primary btn-block">
                     </div>
                     <div class="form-group text-center">
@@ -114,6 +114,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
