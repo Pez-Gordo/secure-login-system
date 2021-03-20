@@ -1,0 +1,1 @@
+create table users (id INT(6) auto_increment primary key, rname varchar(50) not null, username varchar(50) not null, email varchar(50) not null, pass varchar(50) not null, created TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP not null);

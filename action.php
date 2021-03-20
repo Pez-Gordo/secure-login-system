@@ -11,11 +11,12 @@
 
         $conn->query("INSERT INTO users (rname, username, email, pass) VALUES ('$name', '$uname', '$email', '$pass')");
 
-
-
-
-
+        exit("error");
     }
+    else {
+        exit("error");
+    }
+
 
     
 ?>
