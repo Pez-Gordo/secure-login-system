@@ -106,8 +106,21 @@ $(document).ready(function() {
                 method: 'post',
                 data: $("#forgot-frm").serialize()+'&action=forgot',
                 success: function(response) {
-                    $("#alert").show()
-                    $("#result").html(response)
+                    if(response == "ok") {
+                        $('#banner').removeClass("alert-danger").addClass("alert-success")
+                        $("#alert").show()
+                        $("#result").html("We have sent you an email")
+                    }
+                    else if(response == "error"){
+                        $('#banner').removeClass("alert-success").addClass("alert-danger")
+                        $("#alert").show()
+                        $("#result").html("That email is not in our system")
+                    }
+                    else if(response == "errors"){
+                        $('#banner').removeClass("alert-success").addClass("alert-danger")
+                        $("#alert").show()
+                        $("#result").html("There was an error while sending you the recovery email. Please try later")
+                    }
                 }
             })
         }
